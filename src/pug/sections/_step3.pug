@@ -1,0 +1,27 @@
+.step.step-3
+	.step__head
+		.step__num
+			span 3
+			img.step__checknum(src="img/svg/icon-check.svg", alt="check")
+		h6.step__name Согласие
+	.step__body
+		.step__inner
+			.agree 
+				h6.form__title.form__title--mb8 Требуется ваше согласие по следующим пунктам:
+				ul.agree-list 
+					each item in ['Я подтверждаю, что вся представленная информация является достоверной и точной;','Я несу ответственность в соответствии с действующим законодательством Российской Федерации за предоставление заведомо ложных или неполных сведений;','Я выражаю свое согласие на необходимое использование и обработку своих персональных данных, в том числе в информационных системах;','Со сроками оказания государственной услуги ознакомлен.']
+						li.agree-list__item= item
+				.agree__labelbox
+					each item in ['Я подтверждаю свое согласие со всеми вышеперечисленными пунктами','Я уведомлен о том, что результат будет получен в электронном виде']
+						label.agree__label
+							input.agree__input(type="checkbox" name="agree")
+							span.agree__inner
+								span.agree__check
+									svg(width='13' height='10' viewbox='0 0 13 10' fill='none' xmlns='http://www.w3.org/2000/svg')
+										path(d='M4.33342 6.98822L1.58925 4.24406L0.410919 5.42239L4.33342 9.34489L12.4226 1.25573L11.2443 0.0773926L4.33342 6.98822Z' fill='white')
+								span.agree__name= item
+				.warning 
+					img.warning__icon(src="img/svg/icon-ring.svg", alt="@")
+					span.warning__text Пожалуйста, еще раз внимательно проверьте все данные перед отправкой
+				button.button.button-blue.agree__button.js-nextStep(disabled) Отправить
+				p.agree__rights Нажимая кнопку «Отправить», вы соглашаетесь с #[a(href="#") правилами хранения и обработки персональных данных]

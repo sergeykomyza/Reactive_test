@@ -1,0 +1,23 @@
+-
+	var choose = [
+		{name: 'Константинопольский К.К.', status: 'Физическое лицо'},
+		{name: 'ООО «Константинополь»', status: 'Юридическое лицо'}
+	]
+
+.step.step-1.step-active
+	.step__head
+		.step__num
+			span 1
+			img.step__checknum(src="img/svg/icon-check.svg", alt="check")
+		h6.step__name Выбор заявителя
+	.step__body
+		.step__inner
+			.choose
+				each item in choose
+					label.choose__label
+						input.choose__input(type="radio" name="choose")
+						span.choose__inner
+							span.choose__check
+							span.choose__name= item.name
+							span.choose__status= item.status
+				button.button.button-blue.js-nextStep(disabled) Продолжить

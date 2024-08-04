@@ -1,0 +1,13 @@
+include ./../mixins/_mixin.pug
+
+header.header
+  .container 
+    .header__box 
+      .logo 
+        img.logo__img(src="img/svg/logo.svg", alt="logo")
+        span.logo__text Услуги и сервисы Пермского края
+      .auth
+        a.auth__user(href="#")
+          img.auth__icon(src="img/svg/icon-user.svg", alt="user")
+          span.auth__name Константинопольский К.К
+        button.auth__logout Выйти

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.1/css/all.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <title>Reactive Test</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container"> 
+        <div class="header__box"> 
+          <div class="logo"> <img class="logo__img" src="img/svg/logo.svg" alt="logo"/><span class="logo__text">Услуги и сервисы Пермского края</span></div>
+          <div class="auth"><a class="auth__user" href="#"><img class="auth__icon" src="img/svg/icon-user.svg" alt="user"/><span class="auth__name">Константинопольский К.К</span></a>
+            <button class="auth__logout">Выйти</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main" id="app">
+      <div class="container"> 
+        <section class="present"> 
+          <div class="present__box"> 
+            <div class="present__titlebox">
+              <h1 class="present__title">Выдача градостроительного плана земельного участка</h1>
+              <p class="present__text">Градостроительный план земельного участка выдается в целях обеспечения субъектов градостроительной деятельности информацией, необходимой для <br/> архитектурно-строительного проектирования, строительства, реконструкции объектов капитального строительства в границах земельного участка.</p>
+            </div>
+            <div class="executor"> <img class="executor__img" src="img/svg/gerb.svg" alt="gerb"/>
+              <p class="executor__text">Услугу предоставляет</p>
+              <p class="executor__text executor__text--bold">Орган местного самоуправления</p>
+            </div>
+          </div>
+        </section>
+        <section class="request"> 
+          <form action="#">
+            <div class="step-box">
+              <div class="step step-1 step-active">
+                <div class="step__head">
+                  <div class="step__num"><span>1</span><img class="step__checknum" src="img/svg/icon-check.svg" alt="check"/></div>
+                  <h6 class="step__name">Выбор заявителя</h6>
+                </div>
+                <div class="step__body">
+                  <div class="step__inner">
+                    <div class="choose">
+                      <label class="choose__label">
+                        <input class="choose__input" type="radio" name="choose"/><span class="choose__inner"><span class="choose__check"></span><span class="choose__name">Константинопольский К.К.</span><span class="choose__status">Физическое лицо</span></span>
+                      </label>
+                      <label class="choose__label">
+                        <input class="choose__input" type="radio" name="choose"/><span class="choose__inner"><span class="choose__check"></span><span class="choose__name">ООО «Константинополь»</span><span class="choose__status">Юридическое лицо</span></span>
+                      </label>
+                      <button class="button button-blue js-nextStep" disabled="disabled">Продолжить</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="step step-2">
+                <div class="step__head">
+                  <div class="step__num"><span>2</span><img class="step__checknum" src="img/svg/icon-check.svg" alt="check"/></div>
+                  <h6 class="step__name">Данные заявителя</h6>
+                </div>
+                <div class="step__body">
+                  <div class="step__inner">
+                    <div class="form">
+                      <div class="form__maininfo">
+                        <div class="form__field">
+                          <label class="form__label">Фамилия</label>
+                          <input class="form__input" type="text"/>
+                        </div>
+                        <div class="form__field">
+                          <label class="form__label">Имя</label>
+                          <input class="form__input" type="text"/>
+                        </div>
+                        <div class="form__field">
+                          <label class="form__label">Отчество</label>
+                          <input class="form__input" type="text"/>
+                        </div>
+                        <div class="form__field">
+                          <label class="form__label">Электронная почта</label>
+                          <input class="form__input" type="text"/>
+                        </div>
+                        <div class="form__field">
+                          <label class="form__label">Телефон</label>
+                          <input class="form__input js-maskPhone" type="text"/>
+                        </div>
+                      </div>
+                      <h6 class="form__title">Документ, удостоверяющий личность</h6>
+                      <div class="form__documents"> 
+                        <div class="form__field"> 
+                          <label class="form__label">Документ</label>
+                          <input class="form__input" type="text" value=""/>
+                        </div>
+                        <div class="form__fields form__fields--item2"> 
+                          <div class="form__field">
+                            <label class="form__label">Серия</label>
+                            <input class="form__input" type="text" value=""/>
+                          </div>
+                          <div class="form__field">
+                            <label class="form__label">Номер</label>
+                            <input class="form__input" type="text" value=""/>
+                          </div>
+                        </div>
+                        <div class="form__date"><span class="form__label form__label--mbnone">Когда выдан</span>
+                          <div class="form__fields form__fields--item3">
+                            <div class="form__field"> 
+                              <label class="form__label form__label--lightcolor">День</label>
+                              <input class="form__input" type="text" value=""/>
+                            </div>
+                            <div class="form__field"> 
+                              <label class="form__label form__label--lightcolor">Месяц</label>
+                              <input class="form__input" type="text" value=""/>
+                            </div>
+                            <div class="form__field"> 
+                              <label class="form__label form__label--lightcolor">Год</label>
+                              <input class="form__input" type="text" value=""/>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <button class="button button-blue js-nextStep" disabled="disabled">Продолжить</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="step step-3">
+                <div class="step__head">
+                  <div class="step__num"><span>3</span><img class="step__checknum" src="img/svg/icon-check.svg" alt="check"/></div>
+                  <h6 class="step__name">Согласие</h6>
+                </div>
+                <div class="step__body">
+                  <div class="step__inner">
+                    <div class="agree"> 
+                      <h6 class="form__title form__title--mb8">Требуется ваше согласие по следующим пунктам:</h6>
+                      <ul class="agree-list"> 
+                        <li class="agree-list__item">Я подтверждаю, что вся представленная информация является достоверной и точной;</li>
+                        <li class="agree-list__item">Я несу ответственность в соответствии с действующим законодательством Российской Федерации за предоставление заведомо ложных или неполных сведений;</li>
+                        <li class="agree-list__item">Я выражаю свое согласие на необходимое использование и обработку своих персональных данных, в том числе в информационных системах;</li>
+                        <li class="agree-list__item">Со сроками оказания государственной услуги ознакомлен.</li>
+                      </ul>
+                      <div class="agree__labelbox">
+                        <label class="agree__label">
+                          <input class="agree__input" type="checkbox" name="agree"/><span class="agree__inner"><span class="agree__check">
+                              <svg width="13" height="10" viewbox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.33342 6.98822L1.58925 4.24406L0.410919 5.42239L4.33342 9.34489L12.4226 1.25573L11.2443 0.0773926L4.33342 6.98822Z" fill="white"></path>
+                              </svg></span><span class="agree__name">Я подтверждаю свое согласие со всеми вышеперечисленными пунктами</span></span>
+                        </label>
+                        <label class="agree__label">
+                          <input class="agree__input" type="checkbox" name="agree"/><span class="agree__inner"><span class="agree__check">
+                              <svg width="13" height="10" viewbox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.33342 6.98822L1.58925 4.24406L0.410919 5.42239L4.33342 9.34489L12.4226 1.25573L11.2443 0.0773926L4.33342 6.98822Z" fill="white"></path>
+                              </svg></span><span class="agree__name">Я уведомлен о том, что результат будет получен в электронном виде</span></span>
+                        </label>
+                      </div>
+                      <div class="warning"> <img class="warning__icon" src="img/svg/icon-ring.svg" alt="@"/><span class="warning__text">Пожалуйста, еще раз внимательно проверьте все данные перед отправкой</span></div>
+                      <button class="button button-blue agree__button js-nextStep" disabled="disabled">Отправить</button>
+                      <p class="agree__rights">Нажимая кнопку «Отправить», вы соглашаетесь с <a href="#">правилами хранения и обработки персональных данных</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="step step-last step-active">
+              <div class="step__head">
+                <div class="step__num step__num--complete"><img class="step__completeicon" src="img/svg/icon-check.svg" alt="check"/></div>
+                <h6 class="step__name">Заявление принято</h6>
+              </div>
+              <div class="step__body step__body--complete">
+                <div class="step__inner step__inner--complete">
+                  <div class="complete">
+                    <div class="complete__textbox"> 
+                      <p class="complete__text">Номер заявления <b>RU-1234567</b>. Максимальный срок предоставления услуги — 20 рабочих дней. Следите за статусом заявления в <a href="#">Личном кабинете</a>. </p>
+                      <p class="complete__text">Если у вас остались вопросы по оказанию услуги, пожалуйста, обращайтесь по телефону +7 (342) 123-45-67.</p>
+                    </div>
+                    <div class="complete__buttons"> <a class="button button-blue" href="#">Вернуться в каталог</a><a class="button button-transparent" href="#">Перейти в личный кабинет</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </section>
+      </div>
+    </main>
+    <footer class="footer"></footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="https://rawgit.com/RobinHerbots/Inputmask/5.x/dist/jquery.inputmask.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

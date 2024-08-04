@@ -1,0 +1,45 @@
+-
+	var formField = [
+		{name: "Фамилия",  placeholder:"Константинопольский"},
+		{name: "Имя",      placeholder:"Константин"},
+		{name: "Отчество", placeholder:"Константинович"},
+		{name: "Электронная почта", placeholder:"konstantinopolskiy@mail.ru"},
+		{name: "Телефон",  placeholder:"+7 (901) 123-45-67"}
+	]
+
+.step.step-2
+	.step__head
+		.step__num
+			span 2
+			img.step__checknum(src="img/svg/icon-check.svg", alt="check")
+		h6.step__name Данные заявителя
+	.step__body
+		.step__inner
+			.form
+				.form__maininfo
+					each item in formField
+						.form__field
+							label.form__label= item.name
+							input(class=`${item.name == 'Телефон' ? 'form__input js-maskPhone' : 'form__input'}` type="text")  
+				h6.form__title Документ, удостоверяющий личность
+				.form__documents 
+					.form__field 
+						label.form__label Документ
+						input.form__input(type="text" value="")
+					.form__fields.form__fields--item2 
+						.form__field
+							label.form__label Серия
+							input.form__input(type="text" value="")
+						.form__field
+							label.form__label Номер
+							input.form__input(type="text" value="")
+					.form__date
+						span.form__label.form__label--mbnone Когда выдан
+						.form__fields.form__fields--item3
+							each item in ['День','Месяц','Год']
+								.form__field 
+									label.form__label.form__label--lightcolor= item 
+									input.form__input(type="text" value="")
+				button.button.button-blue.js-nextStep(disabled) Продолжить
+
+

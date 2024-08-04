@@ -1,0 +1,53 @@
+.header{
+  padding: 16px 0;
+  background: $sky; 
+  &__box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+  gap: 21px;
+  &__text{
+    font-family: $gostBold;
+    font-size: 18px;
+    line-height: 24px;
+    color: $white; 
+    @media(max-width: 768px){
+			display: none;
+		}
+  }
+}
+
+.auth{
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  &__user{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  &__icon{
+    opacity: 0.5;
+  }
+  &__name{
+    font-family: $gostReg;
+    font-size: 18px;
+    line-height: 24px;
+    color: $white;
+    @media(max-width: 768px){
+			display: none;
+		}
+  }
+  &__logout{
+    font-family: $gostReg;
+    font-size: 18px;
+    line-height: 24px;
+    color: $white;
+  }
+}
